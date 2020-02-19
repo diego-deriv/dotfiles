@@ -1,7 +1,8 @@
 # ------------------------------------------------------------------------------------------------------------
 #
 # PERSONAL $HOME/.bash_profile
-# By Raunak Kathuria
+# Diego Ramírez
+# heavily inspired by the same file from Raunak Kathuria
 #
 # This file is normally read by interactive shells only.
 # Here is the place to define your aliases, functions and
@@ -15,6 +16,23 @@
 # curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh
 #
 source ~/.git-prompt.sh
+
+# General alias
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias durg='du -d 1  | sort -rg'
+alias bcat='bat'
+export PERLDOC_PAGER='less -r'
+
+
+# Load local env and aliases
+if test -d ${HOME}/.rc.d; then
+        for RC_FILE in ${HOME}/.rc.d/*.sh; do
+                test -x "${RC_FILE}" && source "${RC_FILE}"
+        done
+        unset RC_FILE
+fi
+
 
 # Default interaction prompt
 # 0 [06:22] root@debian-wheezy /home/git/organization/repo (branch) #
