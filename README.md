@@ -1,7 +1,8 @@
 # dotfiles
+
 bash, tmux, vim and other configuration files
 
-#### bash_profile
+## bash_profile
 
 Contains configuration for:
 
@@ -12,7 +13,7 @@ Contains configuration for:
 - list active branch of all git repos
 - update branch with upstream
 
-#### tmux.conf
+## tmux.conf
 
 - easy resize in tmux
 - enable mouse navigation for tmux pane
@@ -20,16 +21,16 @@ Contains configuration for:
 - status bar for tmux
 - enable up down key navigation for tmux
 
-#### vimrc
+## vimrc
 
 - vundle configuration for vim
-- control p (ctrl-p) buffer 
+- control p (ctrl-p) buffer
 - git configuration in vim
 
 ---
 
-#### Importing configuration
+## Importing configuration
 
-```
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && wget -O ~/.vimrc https://raw.githubusercontent.com/raunakkathuria/dotfiles/master/.vimrc && wget -O ~/.bash_profile https://raw.githubusercontent.com/raunakkathuria/dotfiles/master/.bash_profile && curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh && sudo apt-get install exuberant-ctags
+```bash
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && wget -O ~/.vimrc https://raw.githubusercontent.com/diego-binary/dotfiles/master/.vimrc && wget -O ~/.bash_profile https://raw.githubusercontent.com/diego-binary/dotfiles/master/.bash_profile && curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh && sudo apt-get install exuberant-ctags
 ```
