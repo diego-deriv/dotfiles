@@ -1,6 +1,6 @@
 export BASH_SILENCE_DEPRECATION_WARNING=1
 
-source .profile
+source ~/.profile
 
 BASH_INCL=/home/nobody/.bash_incl.sh
 
