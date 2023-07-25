@@ -11,10 +11,12 @@ BLUE="\[\e[1;34m\]"
 COLOR=$BLUE;
 if [[ $EUID == 0 ]]; then
     COLOR=$RED
+    PROMPT="#"
 else
     COLOR=$GREEN
+    PROMPT="\$"
 fi
-PS1="$? $COLOR[$(date +%H:%M)][$NORMAL\u@\h$COLOR][$NORMAL\w$COLOR]$(__git_ps1 " ($NORMAL%s$COLOR)") # $NORMAL"
+PS1="$?$COLOR[$(date +%H:%M)][$NORMAL\u@\h$COLOR][$NORMAL\w$COLOR]$(__git_ps1 " ($NORMAL%s$COLOR)")$PROMPT $NORMAL"
 
 export PS1
 
