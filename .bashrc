@@ -2,8 +2,6 @@
 
 [[ $- != *i* ]] && return
 
-source ~/.git-prompt.sh
-
 NORMAL="\[\e[0m\]"
 RED="\[\e[1;31m\]"
 GREEN="\[\e[1;32m\]"
@@ -22,8 +20,8 @@ export PS1
 
 # Custom aliases/functions and environment variables
 if test -d ${HOME}/.rc.d; then
-    for RC_FILE in ${HOME}/.rc.d/*.sh; do
-        test -x "${RC_FILE}" && source "${RC_FILE}"
+    for RC_FILE in $(ls ${HOME}/.rc.d/*) ; do
+        source "${RC_FILE}"
     done
     unset RC_FILE
 fi

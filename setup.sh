@@ -24,9 +24,9 @@ for i in $(ls .profile.d/*)  ; do
     install -v "${i}" ${HOME}/.profile.d
 done
 
-echo 'Installing .profile.d dotfiles'
-for i in $(ls .rc.d/*) ; do 
-    install -v "${i}" ${HOME}/.profile.d
+echo 'Installing .rc.d dotfiles'
+for i in $(ls .rc.d/*) ; do
+    install -v "${i}" ${HOME}/.rc.d
 done
 
 echo 'The Vundle Vim plugin manager'

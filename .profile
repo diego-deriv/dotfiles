@@ -11,8 +11,8 @@ export PATH
 
 # Custom aliases/functions and environment variables
 if test -d ${HOME}/.profile.d; then
-    for PROFILE_FILE in ${HOME}/.profile.d/*.sh; do
-        test -x "${PROFILE_FILE}" && source "${PROFILE_FILE}"
+    for PROFILE_FILE in $(ls ${HOME}/.profile.d/*); do
+        source "${PROFILE_FILE}"
     done
     unset PROFILE_FILE
 fi
