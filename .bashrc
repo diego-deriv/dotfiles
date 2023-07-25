@@ -2,6 +2,19 @@
 
 [[ $- != *i* ]] && return
 
+# FOR THE PROMPT!
+if [ `uname -s` == 'Darwin' ]; then
+    if [ -d $(brew --prefix)/etc/bash_completion.d/ ]
+    then
+    for SCRIPT in $(brew --prefix)/etc/bash_completion.d/*
+    do
+        source ${SCRIPT}
+    done
+    fi
+else
+        [ -e /etc/bash_completion ] && source /etc/bash_completion
+fi
+
 NORMAL="\[\e[0m\]"
 RED="\[\e[1;31m\]"
 GREEN="\[\e[1;32m\]"
@@ -27,14 +40,5 @@ if test -d ${HOME}/.rc.d; then
 fi
 
 
-if [ `uname -s` == 'Darwin' ]; then
-    if [ -d $(brew --prefix)/etc/bash_completion.d/ ]
-    then
-    for SCRIPT in $(brew --prefix)/etc/bash_completion.d/*
-    do
-        source ${SCRIPT}
-    done
-    fi
-fi
 
 
