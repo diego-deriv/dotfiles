@@ -32,5 +32,5 @@ Contains configuration for:
 ## Importing configuration
 
 ```bash
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && wget -O ~/.vimrc https://raw.githubusercontent.com/diego-binary/dotfiles/master/.vimrc && wget -O ~/.bash_profile https://raw.githubusercontent.com/diego-binary/dotfiles/master/.bash_profile && curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh && sudo apt-get install exuberant-ctags
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim && wget -O ~/.vimrc https://raw.githubusercontent.com/diego-deriv/dotfiles/master/.vimrc && wget -O ~/.bash_profile https://raw.githubusercontent.com/diego-deriv/dotfiles/master/.bash_profile && curl -o ~/.git-prompt.sh https://raw.githubusercontent.com/git/git/master/contrib/completion/git-prompt.sh && sudo apt-get install exuberant-ctags
 ```

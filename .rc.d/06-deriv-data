@@ -1,0 +1,15 @@
+#!/bin/sh
+
+function deriv_data () {
+    DERIV_DATA='{}'
+    while read -r EXPORT_LINE ; do 
+        K=`echo $EXPORT_LINE | sed 's/^\([^=]*\)=\(.*\)/\1/g'`
+        V=`echo $EXPORT_LINE | sed 's/^\([^=]*\)=\(.*\)/\2/g'`
+        DERIV_DATA=`echo $DERIV_DATA  | jq --raw-output --compact-output ". += {\"$K\":\"$V\"}"`
+    done < <(grep -h -v '^#' ~/.deriv_data)
+    export DERIV_DATA;
+}
+
+export deriv_data;
+
+deriv_data;

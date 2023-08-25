@@ -26,6 +26,6 @@ export NVM_DIR="$HOME/.nvm"
 # Java
 #export PATH="/usr/local/opt/openjdk/bin:$PATH"
 
-#export GITHUB_USER=diego-binary
+#export GITHUB_USER=diego-deriv
 #export GITHUB_TOKEN=#
 #export TOTP_SECRET=#
