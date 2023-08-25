@@ -9,8 +9,12 @@ export PERLDOC_PAGER='less -r'
 PATH=${PATH}:~/bin:~/opt/bin:~/.local/bin
 export PATH
 
-if [ "$BASH" ]; then
-    . ~/.bashrc
+# Custom aliases/functions and environment variables
+if test -d ${HOME}/.profile.d; then
+    for PROFILE_FILE in $(ls ${HOME}/.profile.d/*); do
+        source "${PROFILE_FILE}"
+    done
+    unset PROFILE_FILE
 fi
 
 # NVM stuff
